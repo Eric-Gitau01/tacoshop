@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>our contact</title>
+        <meta name="description" content="this is a contact page">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+        <h1>Contact Us</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/#about">AboutLTS</a></li>
+                <li><a href="/#menu">Menu</a></li>
+                <li><a href="store.html">Our store</a></li>
+            </ul>
+        </nav>
+        <figure>
+            <img src="img/download.jpeg" alt="tacos" title="this is tacos">
+            <figcaption>This is a picture of tacos</figcaption>
+        </figure>
+        </header>
+        <main>
+            <section>
+            <h2>Our Contact form</h2>
+            <form action="process.php" method="post">
+                
+                <fieldset>
+                    <legend>Send Us A Message</legend>
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" id="name" placeholder="Eric John" required><br>
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" placeholder="Your email address" required><br>
+                    <label for="comment">Your Comment:</label><br>
+                    <textarea id="comment" name="comment" rows="4" cols="50" placeholder="Write your comment here..."></textarea><br><br>
+                </fieldset>
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </form>
+            </section>
+            <section>
+                <h2>Our location</h2>
+                <address>
+                    <strong>Taco Shop</strong><br>
+                    123 Main St<br>
+                    City, State 12345<br>
+                    United States<br>
+                    Phone: <a href="tel:+1-123-456-7890">+1-123-456-7890</a><br>
+                    <a href="mailto:gitaueric09@gmail.com">send a email</a>
+                </address>
+            </section>
+        </main>
+        <footer>
+            <p><a href="#">back to top</a></p>
+            <hr>
+            <p>&copy; 2022 Taco Shop. All rights reserved.</p>
+        </footer>
+    </body>
+</html>
