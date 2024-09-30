@@ -10,22 +10,25 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-       <header>
-            <h1>Welcome to the Little Taco Shop</h1>
-            <nav>
-                <ul>
-                    <li><a href="#about">About<abbr title="The little Taco Shop">LTS</abbr></a></li>
-                    <li><a href="#menu">Our Menu</a></li>
-                    <li><a href="store.html">Store Hours</a></li>
-                    <li><a href="contant.html">Contact Us</a></li>
+       <header class="header">
+            <h1 class="header__h1">Little Taco Shop</h1>
+            <nav class="header__nav">
+                <ul class="header__ul">
+                    
+                    <li><a href="/#menu">Menu</a></li>
+                    <li><a href="store.html">Hours</a></li>
+                    <li><a href="contant.html">Contact</a></li>
+                    <li><a href="about.html">About<!--<abbr title="The little Taco Shop">LTS</abbr>--></a></li>
                 </ul>
-                <figure>
-                    <img src="img/7CC5CCF9EE5A4D88BED4A8231C9DA9BF-1024x683.jpg" alt="a taco image" title="taco and soda" width="350" height="200">
-                    <figcaption>A taco with a side of soda</figcaption>
-                </figure>
             </nav>
-            <hr>
        </header>
+       <section class="hero">
+        <h2 class="hero__h2">Beinvenidos!</h2>
+        <figure>
+            <img src="img/7CC5CCF9EE5A4D88BED4A8231C9DA9BF-1024x683.jpg" alt="a taco image" title="taco and soda" width="1024" height="683">
+            <figcaption class="offscreen">A taco with a side of soda</figcaption>
+        </figure>
+    </section>
        <main>
         <section id="about">
             <h2>AboutLTS</h2>
@@ -46,7 +49,7 @@
             </aside>
             
         </section>
-        <section id="menu">
+        <section>
             <h2>Our Menu</h2>
             <table>
                 <caption>Taco Menu</caption>
@@ -95,9 +98,9 @@
             <hr>
         </section>
        </main>
-        <footer>
+        <footer class="footer">
             <p><a href="/">Back to top</a></p>
-            <p>&copy; 2021 Little Taco Shop</p>
+            <p>&copy; <span class="nowrap">2021 Little Taco Shop</span></p>
         </footer>
     </body>
 </html>
