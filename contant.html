@@ -9,8 +9,8 @@
     </head>
     <body>
         <header class="header">
-        <h1 class="header__h1">Contact Us</h1>
-        <nav class="header__nav">
+        <h1 class="header__h1">Little Shop</h1>
+        <nav class="header__nav"> 
             <ul class="header__ul">
                 <li><a href="/">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -22,29 +22,35 @@
         </header>
        <section>
         <figure class="hero">
-            <img src="img/download.jpeg" alt="tacos" title="this is tacos" width="450" height="250">
+            <img  src="img/7CC5CCF9EE5A4D88BED4A8231C9DA9BF-1024x683.jpg"  alt="tacos" title="this is tacos" width="1024" height="683">
             <figcaption>This is a picture of tacos</figcaption>
         </figure>
        </section>
-        <main>
-            <section>
-            <h2>Our Contact form</h2>
-            <form action="process.php" method="post">
+        <main class="main">
+           <article class="main__article contact">
+            <h2 class="contact__h2">Our Contact form</h2>
+            <form action="process.php" method="post" class="contact__form">
                 
-                <fieldset>
-                    <legend>Send Us A Message</legend>
-                    <label for="name">Name:</label>
-                    <input type="text" name="name" id="name" placeholder="Eric John" required><br>
-                    <label for="email">Email:</label>
-                    <input type="email" name="email" id="email" placeholder="Your email address" required><br>
-                    <label for="comment">Your Comment:</label><br>
-                    <textarea id="comment" name="comment" rows="4" cols="50" placeholder="Write your comment here..."></textarea><br><br>
+                <fieldset class="contact__fieldset">
+                    <legend class="offscreen">Send Us A Message</legend>
+                    <p class="contact__P">
+                        <label class="contact__lable" for="name">Name:</label>
+                        <input class="contact__input" type="text" name="name" id="name" placeholder="Eric John" required><br>
+                    </p>
+                    <p class="contact__P">
+                        <label class="contact__lable" for="email">Email:</label>
+                        <input class="contact__input" type="email" name="email" id="email" placeholder="Your email address" required><br>
+                    </p>
+                   <p class="contact__P">
+                        <label class="contact__lable" for="comment">Your Comment:</label><br>
+                        <textarea class="contact__textarea" id="comment" name="comment" rows="4" cols="50" placeholder="Write your comment here..."></textarea><br><br>
+                   </p>
                 </fieldset>
-                <input type="submit" value="Submit">
-                <input type="reset" value="Reset">
+                <input class="contact__button" type="submit" value="Submit">
+                <input class="contact__button" type="reset" value="Reset">
             </form>
-            </section>
-            <section>
+            </article>
+           <article class="main__article">
                 <h2>Our location</h2>
                 <address>
                     <strong>Taco Shop</strong><br>
@@ -54,10 +60,10 @@
                     Phone: <a href="tel:+1-123-456-7890">+1-123-456-7890</a><br>
                     <a href="mailto:gitaueric09@gmail.com">send a email</a>
                 </address>
-            </section>
+                <p><a href="#">back to top</a></p>
+            </article>
         </main>
-        <footer>
-            <p><a href="#">back to top</a></p>
+        <footer class="footer">
             <hr>
             <p>&copy; 2022 Taco Shop. All rights reserved.</p>
         </footer>

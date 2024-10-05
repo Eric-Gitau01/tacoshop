@@ -19,7 +19,7 @@ img {
 input,
 button,
 textarea {
-    font: inherit;
+    font: inherit; THIS IS T THE THINGS THAT WILL BE OVER THE THINGS THAT WILL BE WILL BE THE THE OVER THE 
 }
 
 /* || VARIABLE */
@@ -179,3 +179,79 @@ a:active {
         transform: skew(10deg, -5deg) scale(1);
     }
 }
+
+/* || FOOTER */
+
+.footer {
+    position: sticky;
+    bottom: 0;
+    background-color: var(--HEADER-BGCOLOR);
+    color: var(--HEADER-COLOR);
+    padding: var(--PADDING-TB);
+    text-align: center;
+}
+
+/* || MAIN */
+
+.main {
+    padding: var(--PADDING-TB) var(--PADDING-SIDE);
+}
+
+.main__article {
+    scroll-margin-top: 0.5rem;
+    margin: var(--MARGIN);
+
+}
+
+.main__article:first-child {
+    min-width: calc(100vh - 20rem);
+}
+
+/* ||ABOUT */
+
+.about__trivia {
+    margin: var(--MARGIN);
+}
+
+.about__trivia-answer {
+    margin-bottom: 1em;
+}
+
+/* || CONTACT */
+
+.contact__h2 {
+    margin: 0;
+}
+
+.contact__fieldset {
+    border: none;
+}
+
+.contact__lable {
+    display: block;
+    font-weight: bold;
+}
+
+.contact__input,
+.contact__textarea {
+    padding: 0.5em;
+    border-radius: 15px;
+    border-width: 2px;
+    width: 100%;
+}
+
+.contact__button {
+    padding: 0.5em 1em;
+    background-color: var(--HIGHLIGHT-COLOR);
+    color: var(--BODY-BGCOLOR);
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+
+
+.
+
+
+
