@@ -8,6 +8,7 @@
         <title>The little Taco Shop</title>
         <link rel="icon" href="favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="style.css">
+      
     </head>
     <body>
        <header class="header">
@@ -24,11 +25,11 @@
        </header>
        <section class="hero">
         <h2 class="hero__h2">Beinvenidos!</h2>
-        <figure>
-            <img src="img/7CC5CCF9EE5A4D88BED4A8231C9DA9BF-1024x683.jpg" alt="a taco image" title="taco and soda" width="1024" height="683">
-            <figcaption class="offscreen">A taco with a side of soda</figcaption>
-        </figure>
-    </section>
+            <figure>
+                <img src="img/7CC5CCF9EE5A4D88BED4A8231C9DA9BF-1024x683.jpg" alt="a taco image" title="taco and soda" width="1024" height="683">
+                <figcaption class="offscreen">A taco with a side of soda</figcaption>
+            </figure> 
+        </section>
        <main class="main">
         <article class="main__article" id="about">
             <h2>AboutLTS</h2>
@@ -49,58 +50,57 @@
             </aside>
             
         </article>
-        <article class="main__article">
-            <h2>Our Menu</h2>
-            <table>
-                <caption>Taco Menu</caption>
+        <article class="main__article Menu">
+            <h2 class="menu__h2">Our Menu</h2>
+            <table class="menu__container">
+                <caption class="offscreen">Taco Menu</caption>
                 <thead>
                     <tr>
-                        <th>Tacos</th>
-                        <th>Quantity</th>
-                        <th>Price</th>
+                        <th class="menu__header " scope="col">Tacos</th>
+                        <th class="menu__header " scope="col">Quantity</th>
+                        <th class="menu__header " scope="col">Price</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td rowspan="3">Crunchy</td>
-                        <td>1</td>
-                        <td>$1.00</td>
+                        <th class="menu__item menu__cr" scope="row" rowspan="3">Crunchy</th>
+                        <td class="menu__item">1</td>
+                        <td class="menu__item">$1.00</td>
                     </tr>
                     <tr>
-                        <td>2</td>
-                        <td>$2.00</td>
+                        <td class="menu__item">2</td>
+                        <td class="menu__item">$2.00</td>
                     </tr>
                     <tr>
-                        <td>3</td>
-                        <td>$3.00</td>
+                        <td class="menu__item">3</td>
+                        <td class="menu__item">$3.00</td>
                     </tr>
                     <tr>
-                        <td rowspan="3">Soft</td>
-                        <td>1</td>
-                        <td>$0.50</td>
+                        <th class="menu__item menu__sf" rowspan="3">Soft</th>
+                        <td class="menu__item">1</td>
+                        <td class="menu__item">$0.50</td>
                     </tr>
                     <tr>
-                        <td>2</td>
-                        <td>$1.00</td>
+                        <td class="menu__item">2</td>
+                        <td class="menu__item">$1.00</td>
                     </tr>
                     <tr>
-                        <td>3</td>
-                        <td>$1.50</td>
+                        <td class="menu__item">3</td>
+                        <td class="menu__item">$1.50</td>
                     </tr>
                 </tbody>
                 <tfoot>
                     <tr>
-                        <td colspan="2">Chips and salsa $2</td>
-                        
+                        <td class="menu__item menu__cs" colspan="2">Chips and salsa $2</td>
                     </tr>
                 </tfoot>
             </table>
-            <hr>
+            <p class="center"><a href="/">Back to top</a></p>
         </article>
        </main>
         <footer class="footer">
-            <p><a href="/">Back to top</a></p>
-            <p>&copy; <span class="nowrap">2021 Little Taco Shop</span></p>
+            <p>&copy; <span class="nowrap"><time id="year"></time> Little Taco Shop</span></p>
         </footer>
+        <script src="main.js"></script>
     </body>
 </html>

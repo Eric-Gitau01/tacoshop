@@ -31,24 +31,25 @@ textarea {
     --FS: clamp(1rem, 2.2vh, 1.5rem);
 
     /* COLOR */
-    --BGCOLOR: rgb(228, 156, 22);
     --BGCOLOR-FADE: rgb(190, 163, 112);
+    --BGCOLOR: rgb(228, 156, 22);
     --BGIMAGE: linear-gradient(to bottom, var(--BGCOLOR), var(--BGCOLOR-FADE));
     --BODY-BGCOLOR: #fff;
-    --FONT-COLOR: #000;
     --BORDER-COLOR: #333;
-    --HIGHLIGHT-COLOR: rgb(51, 178, 51);
-    --LINK-COLOR: #000;
-    --LINK-HOVER: rgba(0, 0, 0, 0.253);
-    --LINK-ACTIVE: orange;
+    --FONT-COLOR: #000;
     --HEADER-BGCOLOR: #000;
-    --NAV-BGCOLOR: #fff;
     --HEADER-COLOR: #fff;
     --HERO-BGCOLOR: rgba(51, 178, 51, 0.75);
     --HERO-COLOR: #fff;
+    --HIGHLIGHT-COLOR: rgb(51, 178, 51);
+    --LINK-ACTIVE: orange;
+    --LINK-COLOR: #000;
+    --LINK-HOVER: rgba(0, 0, 0, 0.253);
+    --NAV-BGCOLOR: #fff;
 
     /* BORDER */
     --BORDERS: 1.5px solid var(--BORDER-COLOR);
+    --BORDER-RADIUS: 15px;
 
     /* STANDARD PADDING */
     --PADDING-TB: 1rem;
@@ -58,6 +59,24 @@ textarea {
     --MARGIN: clamp(1em, 2.5vh, 1.5em) 0;
 }
 
+@media (prefers-color-scheme: dark) {
+    :root {
+        --BGCOLOR: rgb(25, 25, 25);
+        --BGCOLOR-FADE: hwb(0 31% 69%);
+        --BGIMAGE: linear-gradient(to bottom, var(--BGCOLOR), var(--BGCOLOR-FADE));
+        --BODY-BGCOLOR: #333;
+        --FONT-COLOR: #fff;
+        --BORDER-COLOR: #ccc;
+        --HIGHLIGHT-COLOR: rgb(189, 189, 189);
+        --LINK-COLOR: #fff;
+        --LINK-HOVER: orange;
+        --LINK-ACTIVE: rgb(252, 200, 103);
+        --HEADER-BGCOLOR: #333;
+        --NAV-BGCOLOR: #000000;
+        --HEADER-COLOR: #fff;
+        --HERO-COLOR: #333;
+    }
+}
 /* \\ UTILITY CLASSES */
 
 .offscreen {
@@ -183,7 +202,8 @@ a:active {
 /* || FOOTER */
 
 .footer {
-    position: sticky;
+    position: static !important;
+    width: 100%;
     bottom: 0;
     background-color: var(--HEADER-BGCOLOR);
     color: var(--HEADER-COLOR);
@@ -235,7 +255,7 @@ a:active {
 .contact__input,
 .contact__textarea {
     padding: 0.5em;
-    border-radius: 15px;
+    border-radius: var(--BORDER-RADIUS);
     border-width: 2px;
     width: 100%;
 }
@@ -245,13 +265,98 @@ a:active {
     background-color: var(--HIGHLIGHT-COLOR);
     color: var(--BODY-BGCOLOR);
     border: none;
-    border-radius: 15px;
+    border-radius: var(--BORDER-RADIUS);
     cursor: pointer;
 }
 
+/* || MENU */
+
+thead, tbody, tfoot, tr {
+    display: contents;
+}
+
+.menu__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+        "hd1 hd2 hd3"
+        "cr cr1 cr1p"
+        "cr cr2 cr2p"
+        "cr cr3 cr3p"
+        "sf sf1 sf1p"
+        "sf sf2 sf2p"
+        "sf sf3 sf3p"
+        "cs cs cs";  
+    gap: 0.1rem;
+    margin: 1em;
+}
+
+.menu__cr {
+    grid-area: cr;
+}
+
+.menu__sf {
+    grid-area: sf;
+}
+
+.menu__cs {
+    grid-area: cs;
+}
+
+.menu__cr,
+.menu__sf,
+.menu__cs,
+.menu__header {
+    color: var(--HIGHLIGHT-COLOR);
+    font-weight: bold;
+    cursor: pointer;
+    height: 100%;
+    display: grid;
+    place-content: center;
+}
 
 
-.
+.menu__header,
+.menu__item {
+    width: 100%;
+    padding: 1em;
+    border: medium ridge var(--BORDER-COLOR)
+}
 
+.menu__item {
+    display: grid;
+    place-content: center;
+}
 
+thead th:first-child {
+    border-top-left-radius: var(--BORDER-RADIUS);
+}
 
+thead th:last-child {
+    border-top-right-radius: var(--BORDER-RADIUS);
+}
+
+tfoot td {
+    border-bottom-left-radius: var(--BORDER-RADIUS);
+}
+
+tfoot td:last-child {
+    border-bottom-right-radius: var(--BORDER-RADIUS);
+}
+
+@media screen and (min-width: 576px) {
+    .header__h1::before {
+        content: '🌮'
+    }
+    .header__h1::after {
+        content: '🌮'
+    }
+
+    .menu__header,
+    .menu__cr,
+    .menu__sf,
+    .menu__cs {
+        font-size: 1.5em;
+    }
+
+} 
