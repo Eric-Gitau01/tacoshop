@@ -7,6 +7,7 @@
         <meta name="author" content="Eric Ngaruiya Gitau">
         <meta name="description" content="About the little Taco shop">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="img/favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
@@ -15,7 +16,7 @@
             <nav class="header__nav">
                 <ul class="header__ul">
                     <li><a href="/">Home</a></li>
-                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="/#menu">Menu</a></li>
                     <li><a href="store.html">Hours</a></li>
                     <li><a href="contant.html">Contact.</a></li>
                 </ul>
@@ -28,28 +29,31 @@
                 </figure>
             </section>
         <main class="main">
-            <article id="about" class="main__article about">
-                <h2>About The Little Taco Shop</h2>
-                <p><abbr title="little Taco Shop">LTS</abbr> was founded in the early <sub><time datetime="1920">1920</time></sub> and it is still growing in the way that I was hoping that it will <mark>grow</mark>. Tacos and very good and still very healthy to use.<del>this is good</del><strong>Taco are good</strong></p>
+            <article class="main__article about" id="about">
+                <h2>AboutLTS</h2>
+                <p><abbr title="little Taco Shop">LTS</abbr>Was founded in the early <sub><time datetime="1920">1920</time></sub> and it is still growing in the way that I was hoping that it will <mark>grow</mark>.Tacos and very good and still very healthy to use.<del>this is good</del><strong>Taco are good</strong></p>
                 <pre>
                     Tacos are good and still sweet,
                     if you have money and you are hungry,
                     then buy one, buy two,
+                    and you will have a taco that is good for you. 
                 </pre>
-                <aside class="about_trivia">
+                <aside class="about__trivia">
                     <h3>Taco Trivia</h3>
                     <details>
-                        <summary>When did first taco appear in Kenya</summary>
-                        <p class="about_trivia-answer">The first taco appeared in Kenya in 1921 when the first rice taco was sold to the local community.</p>
-                    </details>
-                    <hr>
+                    <summary>When did first taco appear in Kenya</summary>
+                    <p class="about__trivia-answer">The first taco appeared in Kenya in 1921 when the first rice taco was sold to the local community.</p>
+                </details>
+                <hr>
                 </aside>
+                
             </article>
         </main>
-        <footer class="footer">
-            <hr>
-            <p>&copy; 2022 Taco Shop. All rights reserved.</p>
-        </footer>
-        
+        <p>
+            <span class="nowrap">Copyright &copy <time id="year"></time></span>
+            <span class="nowrap">Little Taco Shop</span>
+        </p>
+    </footer>
     </body>
+    <script src="js/main.js" defer></script>
 </html>

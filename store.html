@@ -8,10 +8,11 @@
         <meta name="description" content="about store hours">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     </head>
     <body>
        <header class="header">
-        <h1 class="header__h1">Little Taco Shop Hours</h1>
+        <h1 class="header__h1">Little Taco Shop</h1>
         <nav class="header__nav">
             <ul class="header__ul">
                 <li><a href="/">Home</a></li>
@@ -29,8 +30,8 @@
             <figcaption class="offscreen">Tray of tasty tacos</figcaption>
         </figure>
        </section>
-       <main>
-        <section>
+       <main class="main">
+        <article class="main__article">
             <p>
                 We are open 7 days a week?
             </p>
@@ -46,12 +47,14 @@
                
             </dl>
             <p><a href="#">Back to top</a></p>
-        </section>
+        </article>
        </main>
        <footer class="footer">
-            <p>
-                &copy; 2022 Little Taco Shop. All rights reserved.
-            </p>
-       </footer>
+        <p>
+            <span class="nowrap">Copyright &copy <time id="year"></time></span>
+            <span class="nowrap">Little Taco Shop</span>
+        </p>
+    </footer>
     </body>
+    <script src="js/main.js" defer></script>
 </html>
